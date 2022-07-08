@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "type": "Fast food"
+  },
+  {
+    "id": 1,
+    "type": "Italian"
+  },
+  {
+    "id": 2,
+    "type": "Asian"
+  },
+  {
+    "id": 3,
+    "type": "Portugal"
+  },
+  {
+    "id": 4,
+    "type": "Vegan"
+  }
+
+]

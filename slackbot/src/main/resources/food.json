@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza",
+    "type": "Italian"
+  },
+  {
+    "id": 2,
+    "name": "Pasta",
+    "type": "Italian"
+  },
+  {
+    "id": 3,
+    "name": "Ice cream",
+    "type": "Italian"
+  },
+  {
+    "id": 4,
+    "name": "Hamburger",
+    "type": "Fast food"
+  },
+  {
+    "id": 5,
+    "name": "Pad thai",
+    "type": "Asian"
+  },
+  {
+    "id": 6,
+    "name": "Sushi",
+    "type": "Asian"
+  },
+  {
+    "id": 7,
+    "name": "Pastel de nata",
+    "type": "Portugal"
+  },
+  {
+    "id": 8,
+    "name": "Polvo à Lagareiro",
+    "type": "Portugal"
+  },
+  {
+    "id": 9,
+    "name": "Water",
+    "type": "Vegan"
+  }
+
+
+]

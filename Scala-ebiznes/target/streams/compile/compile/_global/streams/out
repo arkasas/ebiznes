@@ -1,0 +1,49 @@
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:16:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /category                       controllers.CategoryController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:19:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method addNewItem,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST    /category                       controllers.CategoryController.addNewItem
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:23:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /product                       controllers.ProductController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:28:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method addNewItem,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST    /product                       controllers.ProductController.addNewItem
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:30:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /users                       controllers.UsersController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:34:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method add,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST     /users                       controllers.UsersController.add
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:16:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /category                       controllers.CategoryController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:19:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method addNewItem,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST    /category                       controllers.CategoryController.addNewItem
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:23:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /product                       controllers.ProductController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:28:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method addNewItem,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST    /product                       controllers.ProductController.addNewItem
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:30:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method getAll,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] GET     /users                       controllers.UsersController.getAll
+[warn] /Users/arkadiuszpitula/development/ebiznes/Scala-ebiznes/conf/routes:34:1: Auto-application to `()` is deprecated. Supply the empty argument list `()` explicitly to invoke method add,
+[warn] or remove the empty argument list from its definition (Java-defined methods are exempt).
+[warn] In Scala 3, an unapplied method like this will be eta-expanded into a function.
+[warn] POST     /users                       controllers.UsersController.add
+[warn] 12 warnings found

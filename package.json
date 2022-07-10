@@ -1,0 +1,22 @@
+{
+  "name": "ebiznes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkasas/ebiznes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkasas/ebiznes/issues"
+  },
+  "homepage": "https://github.com/arkasas/ebiznes#readme",
+  "dependencies": {
+    "cypress": "^10.3.0"
+  }
+}

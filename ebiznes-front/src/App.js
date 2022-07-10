@@ -1,11 +1,11 @@
 import './App.css';
-import {BrowserRouter, Routes, Route, Link, Navigate, useLocation} from "react-router-dom";
-import Products from "./pages/product";
+import { Routes, Route, Navigate, useLocation} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {Container, Nav, Navbar} from "react-bootstrap";
 import Order from "./pages/order";
 import OrderEnd from "./pages/orderEnd";
 import {useState} from "react";
+import Products from "./pages/Products";
 
 export default function App() {
     const [currentUrl, setCurrentUrl] = useState(useLocation().pathname);

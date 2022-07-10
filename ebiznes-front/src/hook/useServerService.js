@@ -4,7 +4,7 @@ function useServerService() {
         console.log(url)
         console.log(JSON.stringify(data))
         try {
-            const response = await fetch(url, {
+             return await fetch(url, {
                 method: method,
                 body: JSON.stringify(data),
                 headers: {
@@ -26,7 +26,6 @@ function useServerService() {
                     console.error(`error: ${error.message}`);
                 })
 
-            return response;
         } catch (err) {
             console.error(err)
         }

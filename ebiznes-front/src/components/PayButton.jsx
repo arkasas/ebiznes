@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import useOrder from "../hook/useOrder";
 import {useNavigate} from "react-router-dom";
 import usePayment from "../hook/usePayment";
 
-export default function PayButton(props) {
+export default function PayButton() {
 
     let navigate = useNavigate();
     const [isLoading, setLoading] = useState(false);

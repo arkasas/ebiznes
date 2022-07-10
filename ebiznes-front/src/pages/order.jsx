@@ -3,14 +3,16 @@ import {Table} from 'react-bootstrap';
 import {ProductComponent} from "../components/ProductComp";
 import useOrder from "../hook/useOrder";
 import PayButton from "../components/PayButton";
+import useAuth from "../hook/useAuth";
 
 function Order() {
     const { getOrder } = useOrder();
     const [isLoading, setLoading] = useState(true);
     const [items, setProducts] = useState([])
+    const { currentUserValue } = useAuth();
 
     async function getAll() {
-        await getOrder(2)
+        await getOrder(currentUserValue().ID)
             .then((data) => {
                 console.log(data)
                 setLoading(false);

@@ -9,6 +9,7 @@ import (
 
 func Init() *echo.Echo {
 	e := echo.New()
+	api.OauthConfigInit()
 
 	// Middleware
 	e.Use(middleware.Logger())
@@ -42,6 +43,12 @@ func Init() *echo.Echo {
 	e.POST("/order", api.AddToOrder)
 
 	e.POST("/payment/:uid", api.OrderAndPay)
+
+	e.POST("/auth/signin", api.SignIn)
+	e.POST("/auth/login", api.LogIn)
+
+	e.GET("/auth/login/google", api.HandleGoogleLogin)
+	e.GET("/auth/callback/google", api.HandleGoogleCallback)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))

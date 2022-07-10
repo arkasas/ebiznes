@@ -6,10 +6,16 @@ import Order from "./pages/order";
 import OrderEnd from "./pages/orderEnd";
 import {useState} from "react";
 import Products from "./pages/Products";
+import useAuth from "./hook/useAuth";
+import SignIn from "./pages/SignIn";
+import Profile from "./pages/Profile";
+import Logout from "./pages/Logout";
 
 export default function App() {
     const [currentUrl, setCurrentUrl] = useState(useLocation().pathname);
     const handleSelect = (href) => { setCurrentUrl(href) };
+    const {currentUserValue} = useAuth();
+    const [_refresh, forceRefresh] = useState();
 
     return (
       <div className="App">
@@ -22,6 +28,8 @@ export default function App() {
                               <Navbar.Collapse id="basic-navbar-nav" >
                                   <Nav.Link href="/products">Products</Nav.Link>
                                   <Nav.Link href="/order">Order</Nav.Link>
+                                  {!currentUserValue() ? <Nav.Link href="/signin">Sign in</Nav.Link> : null}
+                                  {currentUserValue() ? <Nav.Link href="logout">Logout</Nav.Link> : null}
                               </Navbar.Collapse>
                           </Nav>
                       </Nav>
@@ -36,6 +44,10 @@ export default function App() {
                       <Route exact path='products' element={<Products />}> {/* isAdmin={isAdmin} */}</Route>
                       <Route path="order" element={<Order />} />
                       <Route path="order/finish" element={<OrderEnd></OrderEnd>} />
+                      <Route path="signin" element={<SignIn />} />
+                      <Route path='logged' element={<Profile />} />
+                      <Route path='logout' element={<Logout callback={forceRefresh} />} />
+
                   </Routes>
               </Container>
           </main>

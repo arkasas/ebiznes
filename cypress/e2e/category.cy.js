@@ -10,8 +10,7 @@ describe('POST category', () => {
           expect(resp.body).to.have.property('Name');
 
           let testCat = resp.body;
-          Cypress.env('testCatId', testCat.ID);
-
+          Cypress.env('testCatId', testCat.ID);\
           expect(testCat.Name).to.eq("Traktory");
         })
   })

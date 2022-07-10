@@ -1,8 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Routes, Route, Link, Navigate, useLocation} from "react-router-dom";
 import Products from "./pages/product";
-import ReactDOM from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import Order from "./pages/order";
@@ -31,32 +29,6 @@ export default function App() {
               </Navbar>
           </header>
 
-          {/*<BrowserRouter>*/}
-          {/*    <header className="">*/}
-          {/*        <Navbar bg="light" expand="lg">*/}
-          {/*            <Container>*/}
-          {/*                <Navbar.Brand href="#home">EBiznes</Navbar.Brand>*/}
-          {/*                <Navbar.Toggle aria-controls="basic-navbar-nav" />*/}
-          {/*                <Navbar.Collapse id="basic-navbar-nav">*/}
-          {/*                    <Nav className="me-auto">*/}
-          {/*                        <Nav.Link href="#">Produkty</Nav.Link>*/}
-          {/*                        <Link to="/order">Koszyk</Link>*/}
-          {/*                    </Nav>*/}
-          {/*                </Navbar.Collapse>*/}
-          {/*            </Container>*/}
-          {/*        </Navbar>          </header>*/}
-
-          {/*    <Routes>*/}
-          {/*        <Route path="/" element={<Order />}>*/}
-          {/*            <Route index element={<Products />} />*/}
-          {/*            <Route path="*" element={<Products />} />*/}
-          {/*            <Route path="order" element={<Order />} />*/}
-          {/*            <Route path="order/finish" element={<OrderEnd></OrderEnd>} />*/}
-
-          {/*        </Route>*/}
-          {/*    </Routes>*/}
-          {/*</BrowserRouter>*/}
-
           <main>
               <Container>
                   <Routes>
@@ -71,7 +43,3 @@ export default function App() {
       </div>
   );
 }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(<App />);
-//

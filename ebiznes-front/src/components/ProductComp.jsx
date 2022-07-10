@@ -1,5 +1,4 @@
 import React from 'react';
-import {Button, Col} from 'react-bootstrap';
 import AddToOrderButton from "./AddToOrderButton";
 
 export class ProductComponent extends React.Component {

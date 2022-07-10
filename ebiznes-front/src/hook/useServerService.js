@@ -12,10 +12,8 @@ function useServerService() {
                 }
             })
                 .then((res) => {
-                    console.log(res)
                     return res.json()
                 })
-                // .then((res) => res.json())
                 .then((res) => {
                     if (res.message) {
                         console.info(res.message);

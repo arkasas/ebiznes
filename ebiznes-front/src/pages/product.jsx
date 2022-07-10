@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {ListGroup, Row, Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 import useProduct from "../hook/useProduct";
-import { Col } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
 import {ProductComponent} from "../components/ProductComp";
 
 function Products() {

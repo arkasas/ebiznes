@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Row, Table} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 import {ProductComponent} from "../components/ProductComp";
 import useOrder from "../hook/useOrder";
 import PayButton from "../components/PayButton";
@@ -49,8 +49,7 @@ function Order() {
             <p>Sum: {items.reduce(function (prev, next) {
                 return prev + next.Product.Price;
             }, 0)}</p>
-            <PayButton></PayButton>
-            {/*{items.length > 0 ? <PayButton></PayButton> : null}*/}
+            {items.length > 0 ? <PayButton></PayButton> : null}
         </div>
     )
 }

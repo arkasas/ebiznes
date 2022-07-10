@@ -41,10 +41,6 @@ func Init() {
 		Category:    c1,
 	})
 
-	db.Create(&models.Comment{Comment: "Jest super", ProductId: 1})
-	db.Create(&models.Comment{Comment: "Najlepsza pralka", ProductId: 1})
-	db.Create(&models.Comment{Comment: "Działa", ProductId: 1})
-
 }
 func DBManager() *gorm.DB {
 	return db

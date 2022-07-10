@@ -14,6 +14,11 @@ func Init() *echo.Echo {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"*"},
+		AllowMethods: []string{echo.GET, echo.HEAD, echo.PUT, echo.PATCH, echo.POST, echo.DELETE},
+	}))
+
 	// Routes
 	e.GET("/", hello)
 
@@ -35,6 +40,8 @@ func Init() *echo.Echo {
 
 	e.GET("/order/:uid", api.GetOrder)
 	e.POST("/order", api.AddToOrder)
+
+	e.POST("/payment/:uid", api.OrderAndPay)
 
 	// Start server
 	e.Logger.Fatal(e.Start(":1323"))

@@ -59,3 +59,16 @@ func AddToOrder(c echo.Context) error {
 
 	return c.JSON(http.StatusOK, order)
 }
+
+func OrderAndPay(c echo.Context) error {
+	db := db.DBManager()
+	carts := []models.Order{}
+	uid := c.Param("uid")
+
+	if err := db.Unscoped().Delete(&carts, "user_id = ?", uid).Error; err != nil {
+		fmt.Println(err)
+		return c.JSON(http.StatusNotFound, carts)
+	}
+
+	return c.JSON(http.StatusOK, carts)
+}

@@ -44,7 +44,7 @@ func AddComment(c echo.Context) error {
 
 	db.Preload("Comment").Find(&product)
 
-	return c.JSON(http.StatusOK, product)
+	return c.JSON(http.StatusOK, comment)
 }
 
 func DeleteComment(c echo.Context) error {

@@ -23,30 +23,30 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: https://ebiznesap.azurecr.io/
-          username: ${{ secrets.AzureAppService_ContainerUsername_2b0b847a40e342de88c39597c1da5814 }}
-          password: ${{ secrets.AzureAppService_ContainerPassword_7abf9d9f8f634af7b38bb0a35e3d2acb }}
+          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD }}
+          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}
 
       - name: Build and push container image to registry
         uses: docker/build-push-action@v2
         with:
-          context: ./gorm-echo
+          context: ./Go-backend
           push: true
-          tags: ebiznes1.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_2b0b847a40e342de88c39597c1da5814 }}/api:${{ github.sha }}
-          file: ./gorm-echo/Dockerfile
+          tags: ebiznesap.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}/api:${{ github.sha }}
+          file: ./Go-backend/Dockerfile
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'ebiz-api'
-          slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_0aaf20f49a4b4d11b2cd49b76871c5c2 }}
-          images: 'ebiznes1.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_2b0b847a40e342de88c39597c1da5814 }}/api:${{ github.sha }}'
+#  deploy:
+#    runs-on: ubuntu-latest
+#    needs: build
+#    environment:
+#      name: 'production'
+#      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+#
+#    steps:
+#      - name: Deploy to Azure Web App
+#        id: deploy-to-webapp
+#        uses: azure/webapps-deploy@v2
+#        with:
+#          app-name: 'ebiz-api'
+#          slot-name: 'production'
+#          publish-profile: ${{ secrets.AzureAppService_PublishProfile_0aaf20f49a4b4d11b2cd49b76871c5c2 }}
+#          images: 'ebiznes1.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_2b0b847a40e342de88c39597c1da5814 }}/api:${{ github.sha }}'

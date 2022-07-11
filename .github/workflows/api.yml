@@ -10,29 +10,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: 'ubuntu-latest'
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Docker Build
-        uses: docker/setup-buildx-action@v1
-
-      - name: Log in to registry
-        uses: docker/login-action@v1
-        with:
-          registry: https://ebiznesap.azurecr.io/
-          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}
-          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD }}
-
-      - name: Build and push container image to registry
-        uses: docker/build-push-action@v2
-        with:
-          context: ./Go-backend
-          push: true
-          tags: ebiznesap.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}/api:${{ github.sha }}
-          file: ./Go-backend/Dockerfile
+#  build:
+  ##    runs-on: 'ubuntu-latest'
+  ##
+  ##    steps:
+  ##      - uses: actions/checkout@v2
+  ##
+  ##      - name: Set up Docker Build
+  ##        uses: docker/setup-buildx-action@v1
+  ##
+  ##      - name: Log in to registry
+  ##        uses: docker/login-action@v1
+  ##        with:
+  ##          registry: https://ebiznesap.azurecr.io/
+  ##          username: ${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}
+  ##          password: ${{ secrets.AZUREAPPSERVICE_CONTAINERPASSWORD }}
+  ##
+  ##      - name: Build and push container image to registry
+  ##        uses: docker/build-push-action@v2
+  ##        with:
+  ##          context: ./Go-backend
+  ##          push: true
+  ##          tags: ebiznesap.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}/api:${{ github.sha }}
+  ##          file: ./Go-backend/Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,7 +46,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ebiznes-api'
-          slot-name: 'production'
+          app-name: 'ebznes'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           images: 'ebiznesap.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}/api:${{ github.sha }}'

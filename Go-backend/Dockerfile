@@ -11,6 +11,7 @@ COPY . .
 
 RUN go build -o goapi
 
+
 EXPOSE 1323
 
 CMD [ "./goapi" ]

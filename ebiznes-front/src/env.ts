@@ -1,3 +1,3 @@
 export const env = {
-    serverUrl: 'http://localhost:1323',
+    serverUrl: 'https://ebiznes0-api.azurewebsites.net',
 };

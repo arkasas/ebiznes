@@ -8,7 +8,7 @@ COPY package*.json ./
 
 ADD package.json /usr/src/app/package.json
 
-RUN npm install --force
+RUN npm install --production
 
 # Bundle app source
 
@@ -18,3 +18,4 @@ EXPOSE 3000
 
 # start app
 CMD ["npm", "start"]
+

@@ -15,7 +15,7 @@ export default function App() {
     const [currentUrl, setCurrentUrl] = useState(useLocation().pathname);
     const handleSelect = (href) => { setCurrentUrl(href) };
     const {currentUserValue} = useAuth();
-    const [_refresh, forceRefresh] = useState();
+    const [forceRefresh] = useState();
 
     return (
       <div className="App">
@@ -28,8 +28,6 @@ export default function App() {
                               <Navbar.Collapse id="basic-navbar-nav" >
                                   <Nav.Link href="/products">Products</Nav.Link>
                                   {currentUserValue() ? <Nav.Link href="/order">Order</Nav.Link> : null}
-
-                                  {/*<Nav.Link href="/order">Order</Nav.Link>*/}
                                   {!currentUserValue() ? <Nav.Link href="/signin">Sign in</Nav.Link> : null}
                                   {currentUserValue() ? <Nav.Link href="logout">Logout</Nav.Link> : null}
                               </Navbar.Collapse>

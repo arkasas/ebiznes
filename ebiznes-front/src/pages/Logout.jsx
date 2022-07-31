@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import useAuth from "../hook/useAuth";
+import {useEffect} from "react";
 
 export default function Logout(props) {
 
-    const {isLoggedIn, logout, currentUserValue} = useAuth();
+    const {isLoggedIn, logout} = useAuth();
 
     useEffect(() => {
         console.log("-------------------------------------- logger effect ----------------------------------------");

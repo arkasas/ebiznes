@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 import { NotificationManager } from 'react-notifications';
 
-var currentUserSubject;
-var currentUser;
+let currentUserSubject;
+let currentUser;
 
 function useAuth() {
     const [isLoggedIn, setIsLoggedIn] = useState(false)

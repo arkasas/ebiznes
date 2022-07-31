@@ -1,5 +1,16 @@
 # Project: scala-ebiznes
 
+## Build
+To build and run open project use Intelij: 
+- Select Play2Run configuration
+- Click Run
+
+![Zrzut ekranu 2022-07-31 o 15 20 52](https://user-images.githubusercontent.com/11941278/182028357-9aeba583-3500-4c82-9f1a-488f18a1fde6.png)
+
+## URL
+http://localhost:9000
+
+
 ## End-point: category
 ### Method: GET
 >```

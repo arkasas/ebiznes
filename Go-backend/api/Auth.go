@@ -48,7 +48,7 @@ func HandleGoogleCallback(c echo.Context) error {
 
 	if err != nil {
 		fmt.Println(err.Error())
-		c.Redirect(http.StatusTemporaryRedirect, "https://ebiznes0-front.azurewebsites.net/logged");
+		c.Redirect(http.StatusTemporaryRedirect, "https://ebiznes0-front.azurewebsites.net/signin");
 	}
 
 	userinfo := new(models.User)
@@ -74,7 +74,7 @@ func HandleGoogleCallback(c echo.Context) error {
 	cookieUser.Secure = true
 	c.SetCookie(cookieUser)
 
-	return c.Redirect(http.StatusSeeOther, "http://localhost:3000/logged?token="+user.Jwt);
+	return c.Redirect(http.StatusSeeOther, "https://ebiznes0-front.azurewebsites.net/logged?token="+user.Jwt);
 }
 
 func getUserInfoGoogle(state string, code string) ([]byte, error) {

@@ -46,6 +46,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'ebiznes0-api'
+          app-name: 'ebznes'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           images: 'ebiznesap.azurecr.io/${{ secrets.AZUREAPPSERVICE_CONTAINERUSERNAME }}/api:${{ github.sha }}'

@@ -1,70 +1,10 @@
-# Getting Started with Create React App
+# Project is running on azure website:
+https://ebiznes0-front.azurewebsites.net/products
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 17 09 53" src="https://user-images.githubusercontent.com/11941278/182032875-dfc4dad4-4813-4987-9088-fd806d8af684.png">
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 17 09 49" src="https://user-images.githubusercontent.com/11941278/182032880-6ebbf7a5-bfc6-49ff-8879-b0b5a1c02021.png">
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 17 09 44" src="https://user-images.githubusercontent.com/11941278/182032882-f40ac0d2-e0eb-43e2-a12b-ff06358af938.png">
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 17 09 35" src="https://user-images.githubusercontent.com/11941278/182032883-7c2feef6-0e71-4f21-8b41-338cf5ce93ff.png">
+![Zrzut ekranu 2022-07-31 o 16 00 18 (2)](https://user-images.githubusercontent.com/11941278/182032885-aebcf59b-07b4-47a1-8f5b-f7d7ea593ae9.png)
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 16 00 18" src="https://user-images.githubusercontent.com/11941278/182032886-57055049-6f02-4192-a6ca-eb82ccd134e3.png">
+<img width="1680" alt="Zrzut ekranu 2022-07-31 o 15 58 49" src="https://user-images.githubusercontent.com/11941278/182032887-92ca775e-8422-43d5-a566-18904467c6db.png">

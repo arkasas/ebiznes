@@ -29,7 +29,7 @@ func OauthConfigInit() {
 	os.Setenv("GOOGLE_CLIENT_SECRET", "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")
 
 	googleOauthConfig = &oauth2.Config{
-		RedirectURL:  "http://localhost:1323/auth/callback/google",
+		RedirectURL:  "https://ebiznes0-api.azurewebsites.net/auth/callback/google",
 		ClientID:     os.Getenv("GOOGLE_CLIENT_ID"),
 		ClientSecret: os.Getenv("GOOGLE_CLIENT_SECRET"),
 		Scopes:       []string{"https://www.googleapis.com/auth/userinfo.email"},
@@ -48,7 +48,7 @@ func HandleGoogleCallback(c echo.Context) error {
 
 	if err != nil {
 		fmt.Println(err.Error())
-		c.Redirect(http.StatusTemporaryRedirect, "http://localhost:3000/");
+		c.Redirect(http.StatusTemporaryRedirect, "https://ebiznes0-front.azurewebsites.net/logged");
 	}
 
 	userinfo := new(models.User)
@@ -57,7 +57,7 @@ func HandleGoogleCallback(c echo.Context) error {
 	dbUser, err := doesUserAlreadyExist(userinfo.Email)
 	if err != nil {
 		fmt.Println(err.Error())
-		c.Redirect(http.StatusTemporaryRedirect, "http://localhost:3000/");
+		c.Redirect(http.StatusTemporaryRedirect, "https://ebiznes0-front.azurewebsites.net/");
 	}
 
 	user := models.RawUser{ID: dbUser.ID, Username: userinfo.Email, Email: userinfo.Email}

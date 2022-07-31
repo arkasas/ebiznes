@@ -69,7 +69,6 @@ function SignIn() {
     return (
         <div>
             <h2>Sign In</h2>
-            <Button onClick={() => { navigateTo("/auth/login/github") }}>With GitHub</Button><br/><br/>
             <Button onClick={() => { navigateTo("/auth/login/google") }}>With Google</Button>
 
             <h2>Default logn </h2>

@@ -3,6 +3,8 @@
 
 # Project is running using azure website
 
+https://ebiznes0-api.azurewebsites.net
+
 ## End-point: /order
 
 ### Method: GET

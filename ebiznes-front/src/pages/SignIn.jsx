@@ -69,49 +69,38 @@ function SignIn() {
     return (
         <div>
             <h2>Sign In</h2>
-            <Row className='mt-4'>
-                <Col xs="12" variant="dark">
-                    <Button onClick={() => { navigateTo("/auth/login/github") }}>With GitHub</Button>
-                </Col>
-            </Row>
-            <Row className='mt-4'>
-                <Col xs="12" variant="light">
-                    <Button onClick={() => { navigateTo("/auth/login/google") }}>With Google</Button>
-                </Col>
-            </Row>
-            <Row className='mt-4 justify-content-md-center'>
-                <h2> Traditional account </h2>
-                <Col xs="12" md="6">
-                    {!haveAccount ? (
-                        <div>
-                            <Form onSubmit={signUserIn}>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Username:</Form.Label>
-                                    <Form.Control type="text" name="username" value={username} onChange={e => setUsername(e.target.value.trim())} placeholder="Username" required />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Password:</Form.Label>
-                                    <Form.Control type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
-                                </Form.Group>
-                                <Button type='submit' disabled={disable}>Sign in</Button>
-                            </Form>
-                            <Button variant='link' onClick={switchView}>I have an account. Log in!</Button></div>) : (
-                        <div>
-                            <Form onSubmit={logUserIn}>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Username:</Form.Label>
-                                    <Form.Control type="text" name="username" value={username} onChange={e => setUsername(e.target.value.trim())} placeholder="Username" required />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Password:</Form.Label>
-                                    <Form.Control type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
-                                </Form.Group>
-                                <Button type='submit' disabled={disable}>Log in</Button>
-                            </Form>
-                            <Button variant='link' onClick={switchView}>I don't have an account. Sign in!</Button></div>)
-                    }
-                </Col>
-            </Row>
+            <Button onClick={() => { navigateTo("/auth/login/github") }}>With GitHub</Button><br/><br/>
+            <Button onClick={() => { navigateTo("/auth/login/google") }}>With Google</Button>
+
+            <h2>Default logn </h2>
+            {!haveAccount ? (
+                <div>
+                    <Form onSubmit={signUserIn}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Username:</Form.Label>
+                            <Form.Control type="text" name="username" value={username} onChange={e => setUsername(e.target.value.trim())} placeholder="Username" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
+                        </Form.Group>
+                        <Button type='submit' disabled={disable}>Sign in</Button>
+                    </Form>
+                    <Button variant='link' onClick={switchView}>Log in!</Button></div>) : (
+                <div>
+                    <Form onSubmit={logUserIn}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Username:</Form.Label>
+                            <Form.Control type="text" name="username" value={username} onChange={e => setUsername(e.target.value.trim())} placeholder="Username" required />
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Password:</Form.Label>
+                            <Form.Control type="password" name="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" required />
+                        </Form.Group>
+                        <Button type='submit' disabled={disable}>Log in</Button>
+                    </Form>
+                    <Button variant='link' onClick={switchView}>Sign in!</Button></div>)
+            }
         </div>
     )
 }

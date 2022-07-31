@@ -8,7 +8,7 @@ function Products() {
     const [getProducts] = useProduct();
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true);
-    const { isLoggedIn, login, currentUserValue } = useAuth();
+    const { isLoggedIn } = useAuth();
 
     useEffect(() => {
         async function getAll() {

@@ -7,13 +7,15 @@ export class ProductComponent extends React.Component {
         super(props);
         this.state = {
             product: this.props.product,
-            cannotAddToCart: !!this.props.cannotAddToCart
+            isVisible: !!this.props.isVisible
 
         };
+
+        console.log(this.state.isVisible)
     }
 
     render() {
-        const { product, cannotAddToCart } = this.state;
+        const { product, isVisible } = this.state;
 
         return (
             <tr>
@@ -21,7 +23,7 @@ export class ProductComponent extends React.Component {
                 <td>{product.Description}</td>
                 <td>{product.Price} zł</td>
                 <td>
-                    {cannotAddToCart ? null : <AddToOrderButton product={product}></AddToOrderButton>}
+                    {!isVisible ? null : <AddToOrderButton product={product}></AddToOrderButton>}
                 </td>
             </tr>
         );

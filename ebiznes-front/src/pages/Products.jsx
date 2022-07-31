@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import {Table} from 'react-bootstrap';
 import useProduct from "../hook/useProduct";
 import {ProductComponent} from "../components/ProductComp";
+import useAuth from "../hook/useAuth";
 
 function Products() {
     const [getProducts] = useProduct();
     const [products, setProducts] = useState([])
     const [isLoading, setLoading] = useState(true);
+    const { isLoggedIn, login, currentUserValue } = useAuth();
 
     useEffect(() => {
         async function getAll() {
@@ -46,7 +48,7 @@ function Products() {
                 </thead>
                 <tbody>
                 {products.map(product =>
-                    <ProductComponent product={product}></ProductComponent>
+                    <ProductComponent product={product} isVisible={isLoggedIn}>></ProductComponent>
                 )}
                 </tbody>
             </Table>

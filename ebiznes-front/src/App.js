@@ -27,7 +27,9 @@ export default function App() {
                           <Nav className='ms-auto' activeKey={currentUrl} onSelect={handleSelect}>
                               <Navbar.Collapse id="basic-navbar-nav" >
                                   <Nav.Link href="/products">Products</Nav.Link>
-                                  <Nav.Link href="/order">Order</Nav.Link>
+                                  {currentUserValue() ? <Nav.Link href="/order">Order</Nav.Link> : null}
+
+                                  {/*<Nav.Link href="/order">Order</Nav.Link>*/}
                                   {!currentUserValue() ? <Nav.Link href="/signin">Sign in</Nav.Link> : null}
                                   {currentUserValue() ? <Nav.Link href="logout">Logout</Nav.Link> : null}
                               </Navbar.Collapse>
